@@ -2,7 +2,7 @@ import React from 'react';
 
 const FilmDetails = ({ currentFilm }) => {
     // console.log('FilmDetails.js renders');
-    console.log(currentFilm)
+    console.log(currentFilm);
 
     return (
         // FilmDetails displays information about the current film.

@@ -1,4 +1,5 @@
 import React from 'react';
+import Fave from '../Components/Fave';
 
 const FilmCard = ({ film, onFilmClick }) => { 
     // console.log('FilmCard.js renders');
@@ -16,6 +17,7 @@ const FilmCard = ({ film, onFilmClick }) => {
                 {/* <p>{ film.overview }</p> */}
                 <p>{ film.release_date.substring(0,4) }</p>
                 <button>Add to faves</button>
+                <Fave />
             </div>
         </div>
     );
