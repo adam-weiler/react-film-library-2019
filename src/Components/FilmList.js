@@ -2,6 +2,8 @@ import React from 'react';
 import FilmCard from '../Components/FilmCard';
 
 const FilmList = ({ films, onFilmClick }) => {
+    // console.log('FilmList.js renders.');
+
     const filmElements = films.map(
         (film, index) => <FilmCard film={ film } onFilmClick={ onFilmClick } key={ film.id }/>
     )
@@ -9,8 +11,6 @@ const FilmList = ({ films, onFilmClick }) => {
     const handleFilterClick = (filter) => {
         console.log('FilmList ; handleFilterClick: ', filter);
     }
-
-    // console.log('FilmList.js renders.');
 
     return (
         //The FilmList component displays the 'film' and 'fave' data.

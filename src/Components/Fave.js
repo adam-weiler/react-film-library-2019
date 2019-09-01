@@ -1,17 +1,19 @@
 import React from 'react';
 
 const Fave = ({}) => {
+    // console.log('Fave.js renders.');
+
     //map
 
-    const handleClick = (e) => {
+    const handleClick = (event) => {
+        event.stopPropagation();
         console.log('Fave ; handleClick. ');
     }
 
-
     return (
-        <div className="film-row-fave add_to_queue" onClick = { () => handleClick() }>
-            <i className="material-icons">add_to_queue</i>
-        </div>
+        <button className="film-row-fave add_to_queue" onClick = { (event) => handleClick(event) }>
+            <i className="material-icons">Add to faves</i>
+        </button>
     );
 }
 

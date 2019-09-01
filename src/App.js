@@ -9,20 +9,18 @@ class App extends Component {
     currentFilm: TMDB.films[0]
   }
 
-  setCurrent = (film) => {
-    console.log('setCurrent triggered: ', film);
+          setCurrent = (film) => {
+            console.log('setCurrent triggered: ', film);
 
-    this.setState({
-      currentFilm: film
-    });
-  }
+            this.setState({
+              currentFilm: film
+            });
+          }
 
   componentDidUpdate() {
     console.log('App.js did update: ', this.state);
     // console.log(TMDB.films)
   }
-
-  
 
   render() {
     return (
