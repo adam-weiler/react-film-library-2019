@@ -6,7 +6,7 @@ import FilmDetails from './Components/FilmDetails';
 class App extends Component {
 
   state = {
-    currentFilm: {}
+    currentFilm: TMDB.films[0]
   }
 
   setCurrent = (film) => {
@@ -28,7 +28,12 @@ class App extends Component {
     return (
       <section className="film-library">
         <FilmList films={ TMDB.films } onFilmClick={ this.setCurrent } />
-        <FilmDetails currentFilm={ this.state.currenFilm } />
+        
+        {/* { this.state.currentFilm != {} 
+        ? `${this.state.currentFilm}`
+        : 'No' } */}
+        
+        <FilmDetails currentFilm={ this.state.currentFilm } />
       </section>
     );
   }

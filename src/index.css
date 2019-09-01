@@ -217,6 +217,7 @@ figure {
   width: 20%;
   margin-left: 2em;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+  margin-bottom: 60px;
 }
 
 .film-meta {
