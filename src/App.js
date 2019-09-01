@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TMDB from './TMDB';
 import FilmList from './Components/FilmList';
 import FilmDetails from './Components/FilmDetails';
 
@@ -9,7 +10,7 @@ class App extends Component {
   }
 
   setCurrent = (film) => {
-    console.log('setCurrent triggered: ', film)
+    console.log('setCurrent triggered: ', film);
 
     this.setState({
       currentFilm: film
@@ -17,14 +18,17 @@ class App extends Component {
   }
 
   componentDidUpdate() {
-    console.log('App.js did update: ', this.state)
+    console.log('App.js did update: ', this.state);
+    // console.log(TMDB.films)
   }
+
+  
 
   render() {
     return (
       <section className="film-library">
-        <FilmList onFilmClick={ this.setCurrent } />
-        <FilmDetails />
+        <FilmList films={ TMDB.films } onFilmClick={ this.setCurrent } />
+        <FilmDetails currentFilm={ this.state.currenFilm } />
       </section>
     );
   }

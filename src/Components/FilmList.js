@@ -1,8 +1,10 @@
 import React from 'react';
 import FilmCard from '../Components/FilmCard';
 
-const FilmList = ({ onFilmClick }) => {
-    //map here
+const FilmList = ({ films, onFilmClick }) => {
+    const filmElements = films.map(
+        (film, index) => <FilmCard film={ film } onFilmClick={ onFilmClick } key={ film.id }/>
+    )
 
     // console.log('FilmList.js renders.');
 
@@ -24,7 +26,8 @@ const FilmList = ({ onFilmClick }) => {
             keywords */}
             <input className="film-list-search" type="text" name="userInput" value="" />
 
-            <FilmCard onFilmClick={ onFilmClick } />
+            {/* <FilmCard onFilmClick={ onFilmClick } /> */}
+            { filmElements }
         </section>
     );
 }

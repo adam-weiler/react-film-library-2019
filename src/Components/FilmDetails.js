@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FilmDetails = ({}) => {
+const FilmDetails = ({ currentFilm }) => {
     //Map here
 
     // console.log('FilmDetails.js renders');
