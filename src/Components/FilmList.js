@@ -6,6 +6,10 @@ const FilmList = ({ films, onFilmClick }) => {
         (film, index) => <FilmCard film={ film } onFilmClick={ onFilmClick } key={ film.id }/>
     )
 
+    const handleFilterClick = (filter) => {
+        console.log('FilmList ; handleFilterClick: ', filter);
+    }
+
     // console.log('FilmList.js renders.');
 
     return (
@@ -14,12 +18,20 @@ const FilmList = ({ films, onFilmClick }) => {
             <h2 className="section-title">Films</h2>
 
             <div className="film-list-filters">
-            <button>
-                All <span>(0)</span>
-            </button>
-            <button>
-                Faves <span>(0)</span>
-            </button>
+                <div className="film-list-filter">
+                    {/* <button>
+                        All <span>(0)</span>
+                    </button>
+                    <button>
+                        Faves <span>(0)</span>
+                    </button> */}
+                    ALL
+                    <span className="section-count">{ films.length }</span>
+                </div>
+                <div className="film-list-filter">
+                    FAVES
+                    <span className="section-count">0</span>
+                </div>
             </div>
 
             {/* The input field allows users to search for films that contain specific

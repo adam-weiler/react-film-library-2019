@@ -3,14 +3,13 @@ import React from 'react';
 const Fave = ({}) => {
     //map
 
-    // handleClick(e) {
-    //     console.log('Fave ; handleClick. ');
-    // }
+    const handleClick = (e) => {
+        console.log('Fave ; handleClick. ');
+    }
 
-    // onFilmClick={  }
 
     return (
-        <div className="film-row-fave add_to_queue">
+        <div className="film-row-fave add_to_queue" onFilmClick={ handleClick() }>
             <i className="material-icons">add_to_queue</i>
         </div>
     );
