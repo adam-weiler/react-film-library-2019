@@ -18,20 +18,14 @@ const FilmList = ({ films, onFilmClick }) => {
             <h2 className="section-title">Films</h2>
 
             <div className="film-list-filters">
-                <div className="film-list-filter">
-                    {/* <button>
-                        All <span>(0)</span>
-                    </button>
-                    <button>
-                        Faves <span>(0)</span>
-                    </button> */}
+                <button className="film-list-filter" onClick = { () => handleFilterClick('all') } >
                     ALL
                     <span className="section-count">{ films.length }</span>
-                </div>
-                <div className="film-list-filter">
+                </button>
+                <button className="film-list-filter" onClick = { () => handleFilterClick('faves') }>
                     FAVES
                     <span className="section-count">0</span>
-                </div>
+                </button>
             </div>
 
             {/* The input field allows users to search for films that contain specific

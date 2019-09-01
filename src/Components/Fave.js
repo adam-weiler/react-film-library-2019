@@ -9,7 +9,7 @@ const Fave = ({}) => {
 
 
     return (
-        <div className="film-row-fave add_to_queue" onFilmClick={ handleClick() }>
+        <div className="film-row-fave add_to_queue" onClick = { () => handleClick() }>
             <i className="material-icons">add_to_queue</i>
         </div>
     );
