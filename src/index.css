@@ -53,7 +53,7 @@ figure {
   background-color: #f0f0f0;
 }
 
-.film-row {
+.film-card {
   display: grid;
   position: relative;
   grid-template-columns: 1fr 3fr;
@@ -63,11 +63,11 @@ figure {
   background-color: white;
 }
 
-.film-row:hover {
+.film-card:hover {
   cursor: pointer;
 }
 
-.film-row-fave {
+.film-card-fave {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -78,7 +78,7 @@ figure {
   transition: all 0.1s linear;
 }
 
-.film-row-fave.remove_from_queue {
+.film-card-fave.remove_from_queue {
   background-color: rgba(32, 178, 170, 0.75);
 }
 

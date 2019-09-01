@@ -1,4 +1,5 @@
 import React from 'react';
+import FilmCard from '../Components/FilmCard';
 
 const FilmList = ({ onFilmClick }) => {
     //map here
@@ -23,19 +24,7 @@ const FilmList = ({ onFilmClick }) => {
             keywords */}
             <input className="film-list-search" type="text" name="userInput" value="" />
 
-            {/* Each film is represented by a FilmRow component, which displays the
-            corresponding title, overview, and poster image. The FilmRow component
-            also allows users to add or remove the film from their 'Fave' list. */}
-            <div className="film-row">
-                <figure>
-                    <img src="" alt="" className="film-poster" />
-                </figure>
-                <div className="film-summary">
-                    <h2>My Film Title</h2>
-                    <p>My Film Summary</p>
-                    <button>Add to faves</button>
-                </div>
-            </div>
+            <FilmCard />
         </section>
     );
 }
