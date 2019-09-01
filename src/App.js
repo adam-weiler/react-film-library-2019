@@ -16,6 +16,10 @@ class App extends Component {
     });
   }
 
+  componentDidUpdate() {
+    console.log('App.js did update: ', this.state)
+  }
+
   render() {
     return (
       <section className="film-library">

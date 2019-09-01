@@ -4,7 +4,7 @@ import FilmCard from '../Components/FilmCard';
 const FilmList = ({ onFilmClick }) => {
     //map here
 
-    console.log('FilmList.js renders.');
+    // console.log('FilmList.js renders.');
 
     return (
         //The FilmList component displays the 'film' and 'fave' data.
@@ -24,7 +24,7 @@ const FilmList = ({ onFilmClick }) => {
             keywords */}
             <input className="film-list-search" type="text" name="userInput" value="" />
 
-            <FilmCard />
+            <FilmCard onFilmClick={ onFilmClick } />
         </section>
     );
 }

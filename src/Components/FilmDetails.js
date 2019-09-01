@@ -3,7 +3,7 @@ import React from 'react';
 const FilmDetails = ({}) => {
     //Map here
 
-    console.log('FilmDetails.js renders');
+    // console.log('FilmDetails.js renders');
 
     return (
         // FilmDetails displays information about the current film.
