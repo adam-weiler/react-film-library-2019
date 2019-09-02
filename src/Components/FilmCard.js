@@ -12,8 +12,8 @@ const FilmCard = ({ film, onFilmClick }) => {
         // Each film is represented by a FilmCard component, which displays the
         // corresponding title, overview, and poster image. The FilmCard component
         // also allows users to add or remove the film from their 'Fave' list.
-        // <div className="film-card" onClick = { () => onFilmClick(film) }>
-        <div className="film-card" onClick = { () => handleDetailsClick(film) }>
+        <div className="film-card" onClick = { () => onFilmClick(film) }>
+        {/* <div className="film-card" onClick = { () => handleDetailsClick(film) }> */}
             <figure>
                 <img src={ `http://image.tmdb.org/t/p/w780${ film.poster_path }`} alt={`${ film.title } movie poster` } className="film-poster" />
             </figure>
