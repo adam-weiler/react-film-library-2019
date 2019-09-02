@@ -78,6 +78,11 @@ figure {
   transition: all 0.1s linear;
 }
 
+.film-card-fave.add_to_queue {
+  color: #fff;
+  background-color: #ccc;
+}
+
 .film-card-fave.remove_from_queue {
   background-color: rgba(32, 178, 170, 0.75);
 }
